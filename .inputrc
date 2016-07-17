@@ -1,0 +1,21 @@
+# Use vi for editing mode
+set editing-mode vi
+
+# Show all completions as soon as Tab is pressed
+set show-all-if-ambiguous on
+
+# Ignore case
+set completion-ignore-case on
+
+####################################
+# Keymaps for when in vi command mode
+set keymap vi-command
+
+
+
+###################################
+# Keymaps for when in vi insert mode
+set keymap vi-insert
+
+# Pressing "jj" in insert mode takes user to command mode
+"jj": vi-movement-mode

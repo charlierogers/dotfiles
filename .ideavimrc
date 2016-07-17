@@ -1,0 +1,3 @@
+inoremap jj <Esc>
+map n <C-E>
+map m <C-Y>
