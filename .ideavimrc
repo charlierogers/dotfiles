@@ -1,3 +1,7 @@
 inoremap jj <Esc>
-map n <C-E>
-map m <C-Y>
+map <Space> <C-Y>
+map , <C-E>
+
+if ('unnamedplus')
+    set clipboard=unnamed,unnamedplus
+endif
