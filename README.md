@@ -3,9 +3,13 @@ User configuration files for UNIX environments
 
 
 
+
+
 REQUIREMENTS FOR CONFIG FILES TO WORK
 
-* .VIMRC
+
+.VIMRC
+
 Vim must have +clipboard, +xclipboard, +python, and -python3 to work with both system clipboard support and the YouCompleteMe plugin.
 This configuration can be achieved by building vim from source by ...
 1. Follow these instructions: https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source until the step where the 
