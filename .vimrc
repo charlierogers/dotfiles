@@ -59,9 +59,10 @@ inoremap {}     {}}}}}}
 " Remaps changing from command mode from Esc to jj
 inoremap jj <Esc>
 
-" Remaps scrolling up and down (without cursor) to n for down and m for up
-map n <C-E>
-map m <C-Y>
+" Remaps scrolling up and down (without cursor) to Space for down and
+" comma for up
+map <Space> <C-E>
+map , <C-Y>
 
 " Set color scheme to desert
 color desert 
