@@ -59,6 +59,9 @@ inoremap {}     {}}}}}}
 " Remaps changing from command mode from Esc to jj
 inoremap jj <Esc>
 
+" Scrolling with mouse
+set mouse=a
+
 " Remaps scrolling up and down (without cursor) to Space for down and
 " comma for up
 map <Space> <C-E>
