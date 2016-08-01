@@ -2,6 +2,11 @@ inoremap jj <Esc>
 map <Space> <C-E>
 map , <C-Y>
 
+" move the current line down
+nnoremap - ddp
+" move the current line up
+nnoremap _ ddkP
+
 if ('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
