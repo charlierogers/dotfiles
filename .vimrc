@@ -67,6 +67,11 @@ set mouse=a
 map <Space> <C-E>
 map , <C-Y>
 
+" move the current line down
+nnoremap - ddp
+" move the current line up
+nnoremap _ ddkP
+
 " Set color scheme to desert
 color desert 
 
