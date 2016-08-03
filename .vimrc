@@ -83,6 +83,26 @@ if has('unnamedplus')
 endif
 
 
+" Relative Line Number Toggling
+set relativenumber
+
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set number
+    else
+        set relativenumber
+    endif
+endfunc
+
+noremap <C-n> :call NumberToggle()<cr>
+
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Options for YouCompleteMe plugin
 " Set default path for .ycm_extra_conf.py file

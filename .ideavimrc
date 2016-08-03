@@ -10,3 +10,21 @@ nnoremap _ ddkP
 if ('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
+
+
+" Relative Line Number Toggling
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set number
+    else
+        set relativenumber
+    endif
+endfunc
+
+noremap <C-n> :call NumberToggle()<cr>
+
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
