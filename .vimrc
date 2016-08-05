@@ -50,11 +50,15 @@ set smarttab
 " Turning on line numbering
 set number
 
+" Toggling relative line numbers
+nnoremap <leader>r :set relativenumber!<cr>
+
 " Setting up autocomplete for braces
 noremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
 inoremap {}     {}}}}}}
+
 
 " Remaps changing from command mode from Esc to jj
 inoremap jj <Esc>
@@ -64,8 +68,8 @@ set mouse=a
 
 " Remaps scrolling up and down (without cursor) to Space for down and
 " comma for up
-map <Space> <C-E>
-map , <C-Y>
+vnoremap <Space> <C-E>
+vnoremap , <C-Y>
 
 " move the current line down
 nnoremap - ddp
@@ -81,6 +85,8 @@ color desert
 if has('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
+
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

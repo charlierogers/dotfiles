@@ -1,12 +1,21 @@
+" Easy way to enter normal mode from insert mode
 inoremap jj <Esc>
-map <Space> <C-E>
-map , <C-Y>
+
+" Easy way to do one-line scrolling in visual/normal mode
+vnoremap <Space> <C-E>
+vnoremap , <C-Y>
 
 " move the current line down
 nnoremap - ddp
 " move the current line up
 nnoremap _ ddkP
 
+
+
+" Toggling relative line numbers
+nnoremap <leader>r :set relativenumber!<cr>
+
+" Integration with system clipboard
 if ('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
