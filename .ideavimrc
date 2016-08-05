@@ -2,8 +2,8 @@
 inoremap jj <Esc>
 
 " Easy way to do one-line scrolling in visual/normal mode
-vnoremap <Space> <C-E>
-vnoremap , <C-Y>
+nnoremap <Space> <C-E>
+nnoremap , <C-Y>
 
 " move the current line down
 nnoremap - ddp
