@@ -81,7 +81,7 @@ color desert
 
 " Allows vim to read and write to both the * and + registers for system
 " clipboard 
-" Only works with vim-gtk or vim-gnome
+" Only works +clipboard and/or +xterm_clipboard
 if has('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
