@@ -124,9 +124,4 @@ bind '"\e[B":history-search-forward'
 #Shortcut to copy to clipboard with xclip
 alias copy="xclip -sel clip"
 
-#Shortcut command to go directly to ~/Documents/eecs280 directory
-alias eecs="cd ~/Documents/eecs280/"
-
-#Shortcut to change brightness
-alias b="xrandr --output eDP1 --brightness"
 export PATH=$HOME/bin:$PATH
