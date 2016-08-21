@@ -1,4 +1,4 @@
-# configs
+# dotfiles
 User configuration files for UNIX environments
 
 
@@ -24,7 +24,7 @@ OR
 
 Replace all the steps involving cloning and building vim source with the following:
 
-Install the `vim-charlierogers.deb` package from this repo with 
+Install the `vim-charlie.deb` package from this repo with 
 ```
 sudo dpkg -i vim-charlierogers.deb
 sudo apt-get install -f
