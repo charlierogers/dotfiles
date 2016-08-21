@@ -1,4 +1,7 @@
 set nocompatible              " be iMproved, required
+
+" -------------------- VUNDLE -------------------------
+
 filetype off                  " required by Vundle
 
 " set the runtime path to include Vundle and initialize
@@ -33,6 +36,23 @@ filetype plugin indent on    " required
 
 
 
+
+
+" ------- Options for Plugins installed with Vundle --------------
+
+
+" YouCompleteMe
+" Set default path for .ycm_extra_conf.py file
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+
+
+
+" ------------------- END VUNDLE ---------------------------
+
+
+
+
+
 " Turn syntax highlighting on
 syntax on
 
@@ -52,13 +72,6 @@ set number
 
 " Toggling relative line numbers
 nnoremap <leader>r :set relativenumber!<cr>
-
-" Setting up autocomplete for braces
-noremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}}}}}}
-
 
 " Remaps changing from command mode from Esc to jj
 inoremap jj <Esc>
@@ -87,9 +100,3 @@ if has('unnamedplus')
 endif
 
 
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Options for YouCompleteMe plugin
-" Set default path for .ycm_extra_conf.py file
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
