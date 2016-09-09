@@ -82,9 +82,7 @@ set mouse=a
 
 " Remaps scrolling up and down (without cursor) to Space for down and
 " comma for up
-"vnoremap <Space> <C-E>
 nnoremap <Space> <C-E>
-"vnoremap , <C-Y>
 nnoremap , <C-Y>
 
 " move the current line down
@@ -102,4 +100,14 @@ if has('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
 
+function! g:ToggleColorColumn()
+    if &colorcolumn != ''
+        setlocal colorcolumn&
+    else
+        setlocal colorcolumn=80
+        highlight ColorColumn ctermbg=0*
+    endif
+endfunction
+                       
+nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
 
