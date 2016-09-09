@@ -46,6 +46,8 @@ filetype plugin indent on    " required
 " Set default path for .ycm_extra_conf.py file
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
+" Shortcut mapping for fast FixIt
+map <F2> :YcmCompleter FixIt<CR>
 
 
 " ------------------- END VUNDLE ---------------------------
@@ -100,14 +102,18 @@ if has('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
 
+" Toggling for colorcolumn at 80 characters
 function! g:ToggleColorColumn()
     if &colorcolumn != ''
         setlocal colorcolumn&
     else
-        setlocal colorcolumn=80
         highlight ColorColumn ctermbg=0*
+        setlocal colorcolumn=80
     endif
 endfunction
                        
 nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
+
+" Change buffer switching to be tab-based
+set switchbuf=usetab
 
