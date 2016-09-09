@@ -82,8 +82,10 @@ set mouse=a
 
 " Remaps scrolling up and down (without cursor) to Space for down and
 " comma for up
-vnoremap <Space> <C-E>
-vnoremap , <C-Y>
+"vnoremap <Space> <C-E>
+nnoremap <Space> <C-E>
+"vnoremap , <C-Y>
+nnoremap , <C-Y>
 
 " move the current line down
 nnoremap - ddp
