@@ -46,6 +46,8 @@ filetype plugin indent on    " required
 " Set default path for .ycm_extra_conf.py file
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
+let g:ycm_show_diagnostics_ui = 0
+
 " Shortcut mapping for fast FixIt
 map <F2> :YcmCompleter FixIt<CR>
 

@@ -39,7 +39,7 @@ flags = [
 '-Wextra',
 '-Werror',
 '-pedantic',
-'-Wconversion'
+'-Wconversion',
 # You 100% do NOT need -DUSE_CLANG_COMPLETER in your flags; only the YCM
 # source code needs it.
 # THIS IS IMPORTANT! Without a "-std=<something>" flag, clang won't know which
