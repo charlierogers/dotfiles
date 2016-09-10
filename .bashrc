@@ -125,3 +125,8 @@ bind '"\e[B":history-search-forward'
 alias copy="xclip -sel clip"
 
 export PATH=$HOME/bin:$PATH
+
+#Sets GCC version to 5.1.0
+module load gcc/5.1.0
+
+
