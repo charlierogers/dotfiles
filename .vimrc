@@ -20,6 +20,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,6 +56,15 @@ let g:ycm_show_diagnostics_ui = 0
 map <F2> :YcmCompleter FixIt<CR>
 
 
+
+" Vim-Monokai
+set t_Co=256  " vim-monokai now only support 256 colours in terminal."
+
+
+" Vim-EasyTags
+nnoremap <F5> :UpdateTags<cr>
+
+
 " ------------------- END VUNDLE ---------------------------
 
 
@@ -62,6 +74,8 @@ map <F2> :YcmCompleter FixIt<CR>
 " Turn syntax highlighting on
 syntax on
 
+" Set color scheme to monokai
+colorscheme monokai
 
 " Setting indentation 
 set autoindent
@@ -95,8 +109,6 @@ nnoremap - ddp
 " move the current line up
 nnoremap _ ddkP
 
-" Set color scheme to desert
-color desert 
 
 " Allows vim to read and write to both the * and + registers for system
 " clipboard 
