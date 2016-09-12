@@ -18,7 +18,11 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'Townk/vim-autoclose'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-commentary'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,6 +50,19 @@ filetype plugin indent on    " required
 " Set default path for .ycm_extra_conf.py file
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
+let g:ycm_show_diagnostics_ui = 0
+
+" Shortcut mapping for fast FixIt
+map <F2> :YcmCompleter FixIt<CR>
+
+
+
+" Vim-Monokai
+set t_Co=256  " vim-monokai now only support 256 colours in terminal."
+
+
+" Vim-EasyTags
+nnoremap <F5> :UpdateTags<cr>
 
 
 " ------------------- END VUNDLE ---------------------------
@@ -57,6 +74,8 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " Turn syntax highlighting on
 syntax on
 
+" Set color scheme to monokai
+colorscheme monokai
 
 " Setting indentation 
 set autoindent
@@ -82,16 +101,14 @@ set mouse=a
 
 " Remaps scrolling up and down (without cursor) to Space for down and
 " comma for up
-vnoremap <Space> <C-E>
-vnoremap , <C-Y>
+nnoremap <Space> <C-E>
+nnoremap , <C-Y>
 
 " move the current line down
 nnoremap - ddp
 " move the current line up
 nnoremap _ ddkP
 
-" Set color scheme to desert
-color desert 
 
 " Allows vim to read and write to both the * and + registers for system
 " clipboard 
@@ -100,4 +117,18 @@ if has('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
 
+" Toggling for colorcolumn at 80 characters
+function! g:ToggleColorColumn()
+    if &colorcolumn != ''
+        setlocal colorcolumn&
+    else
+        highlight ColorColumn ctermbg=0*
+        setlocal colorcolumn=80
+    endif
+endfunction
+                       
+nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
+
+" Change buffer switching to be tab-based
+set switchbuf=usetab
 
