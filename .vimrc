@@ -132,3 +132,5 @@ nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
 " Change buffer switching to be tab-based
 set switchbuf=usetab
 
+" cppman for vim
+autocmd FileType cpp set keywordprg=cppman
