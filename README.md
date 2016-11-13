@@ -26,7 +26,7 @@ Replace all the steps involving cloning and building vim source with the followi
 
 Install the `vim-charlie.deb` package from this repo with 
 ```
-sudo dpkg -i vim-charlierogers.deb
+sudo dpkg -i vim-charlie.deb
 sudo apt-get install -f
 ```
 
