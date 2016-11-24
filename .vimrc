@@ -20,10 +20,15 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
-" Plugin 'crusoexia/vim-monokai'
+Plugin 'crusoexia/vim-monokai'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'morhetz/gruvbox'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,8 +56,6 @@ filetype plugin indent on    " required
 " Set default path for .ycm_extra_conf.py file
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
-let g:ycm_show_diagnostics_ui = 0
-
 " Shortcut mapping for fast FixIt
 map <F2> :YcmCompleter FixIt<CR>
 
@@ -64,6 +67,8 @@ set t_Co=256  " vim-monokai now only support 256 colours in terminal."
 " Vim-EasyTags
 nnoremap <F5> :UpdateTags<cr>
 
+" Shortcut to open NERDTree
+nnoremap <leader>t :NERDTree<cr>
 
 " ------------------- END VUNDLE ---------------------------
 
