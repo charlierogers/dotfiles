@@ -20,9 +20,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
-Plugin 'crusoexia/vim-monokai'
+" Plugin 'crusoexia/vim-monokai'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,9 +58,8 @@ map <F2> :YcmCompleter FixIt<CR>
 
 
 
-" Vim-Monokai
+" Vim-Monokai and Gruvbox
 set t_Co=256  " vim-monokai now only support 256 colours in terminal."
-
 
 " Vim-EasyTags
 nnoremap <F5> :UpdateTags<cr>
@@ -75,7 +75,9 @@ nnoremap <F5> :UpdateTags<cr>
 syntax on
 
 " Set color scheme to monokai
-colorscheme monokai
+" colorscheme monokai
+" Set color scheme to gruvbox
+colorscheme gruvbox
 
 " Setting indentation 
 set autoindent
