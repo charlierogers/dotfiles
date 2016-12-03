@@ -23,14 +23,13 @@ Plugin 'tpope/vim-commentary'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'tpope/vim-fugitive'
+Plugin 'christoomey/vim-conflicted'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 
-" COLORSCHEME PLUGINS
 Plugin 'flazz/vim-colorschemes'
 Plugin 'crusoexia/vim-monokai'
-Plugin 'morhetz/gruvbox'
 Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
@@ -66,19 +65,23 @@ map <F2> :YcmCompleter FixIt<CR>
 " Vim-EasyTags
 nnoremap <F5> :UpdateTags<cr>
 
+" Vim-Conflicted
+" display version name of each split in the statusbar
+set stl+=%{ConflictedVersion()}
+
 " Shortcut to open NERDTree
 nnoremap <leader>t :NERDTree<cr>
 
+<<<<<<< HEAD
 
 " COLORSCHEME Plugin Options
 
-" Vim-Monokai
-set t_Co=256  " vim-monokai now only support 256 colours in terminal."
+" Use 256 colors in terminal
+set t_Co=256
 
 " Solarized
 set background=light
 let g:solarized_termcolors=256
-
 
 " ------------------- END VUNDLE ---------------------------
 
@@ -87,9 +90,7 @@ let g:solarized_termcolors=256
 
 
 " Turn syntax highlighting on
-if !exists("g:syntax_on")
-        syntax enable
-endif
+syntax enable
 
 " Set color scheme 
 colorscheme solarized
