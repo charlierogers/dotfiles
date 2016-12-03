@@ -20,14 +20,18 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
-Plugin 'crusoexia/vim-monokai'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
+
+" COLORSCHEME PLUGINS
+Plugin 'flazz/vim-colorschemes'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'morhetz/gruvbox'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,16 +63,22 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 map <F2> :YcmCompleter FixIt<CR>
 
 
-
-" Vim-Monokai
-set t_Co=256  " vim-monokai now only support 256 colours in terminal."
-
-
 " Vim-EasyTags
 nnoremap <F5> :UpdateTags<cr>
 
 " Shortcut to open NERDTree
 nnoremap <leader>t :NERDTree<cr>
+
+
+" COLORSCHEME Plugin Options
+
+" Vim-Monokai
+set t_Co=256  " vim-monokai now only support 256 colours in terminal."
+
+" Solarized
+set background=light
+let g:solarized_termcolors=256
+
 
 " ------------------- END VUNDLE ---------------------------
 
@@ -77,10 +87,12 @@ nnoremap <leader>t :NERDTree<cr>
 
 
 " Turn syntax highlighting on
-syntax on
+if !exists("g:syntax_on")
+        syntax enable
+endif
 
-" Set color scheme to monokai
-colorscheme monokai
+" Set color scheme 
+colorscheme solarized
 
 " Setting indentation 
 set autoindent
