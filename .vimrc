@@ -72,8 +72,6 @@ set stl+=%{ConflictedVersion()}
 " Shortcut to open NERDTree
 nnoremap <leader>t :NERDTree<cr>
 
-<<<<<<< HEAD
-
 " COLORSCHEME Plugin Options
 
 " Use 256 colors in terminal
