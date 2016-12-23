@@ -17,20 +17,30 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 
+
+" Editing
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-commentary'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+
+" Navigation
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Version Control
 Plugin 'tpope/vim-fugitive'
 Plugin 'christoomey/vim-conflicted'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
 
+" Colorschemes
 Plugin 'flazz/vim-colorschemes'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'crusoexia/vim-dracula'
+" Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,8 +88,8 @@ nnoremap <leader>t :NERDTree<cr>
 set t_Co=256
 
 " Solarized
-set background=light
-let g:solarized_termcolors=256
+" set background=light
+" let g:solarized_termcolors=256
 
 " ------------------- END VUNDLE ---------------------------
 
@@ -91,7 +101,7 @@ let g:solarized_termcolors=256
 syntax enable
 
 " Set color scheme 
-colorscheme solarized
+colorscheme dracula
 
 " Setting indentation 
 set autoindent
