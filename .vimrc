@@ -26,6 +26,7 @@ Plugin 'xolox/vim-easytags'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Navigation
 Plugin 'scrooloose/nerdtree'
