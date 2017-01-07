@@ -27,6 +27,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'vim-syntastic/syntastic'
 
 " Navigation
 Plugin 'scrooloose/nerdtree'
@@ -92,6 +93,16 @@ set t_Co=256
 " set background=light
 " let g:solarized_termcolors=256
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " ------------------- END VUNDLE ---------------------------
 
 
@@ -143,6 +154,9 @@ nnoremap _ ddkP
 if has('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
+
+" Toggle between regular editing mode and past mode
+set pastetoggle=<F3>
 
 " Toggling for colorcolumn at 80 characters
 function! g:ToggleColorColumn()
