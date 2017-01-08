@@ -156,7 +156,7 @@ if has('unnamedplus')
 endif
 
 " Toggle between regular editing mode and past mode
-set pastetoggle=<F3>
+set pastetoggle=<F3> 
 
 " Toggling for colorcolumn at 80 characters
 function! g:ToggleColorColumn()
@@ -175,3 +175,6 @@ set switchbuf=usetab
 
 " cppman for vim
 autocmd FileType cpp set keywordprg=cppman
+
+" Don't print headers when printing to pdf with :hardcopy command
+set popt+=header:0
