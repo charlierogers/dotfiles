@@ -28,6 +28,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'zweifisch/pipe2eval'
 
 " Navigation
 Plugin 'scrooloose/nerdtree'
@@ -83,6 +84,9 @@ set stl+=%{ConflictedVersion()}
 
 " Shortcut to open NERDTree
 nnoremap <leader>t :NERDTree<cr>
+
+" Pipe2Eval config
+let g:pipe2eval_map_key = '<Leader>e'
 
 " COLORSCHEME Plugin Options
 
