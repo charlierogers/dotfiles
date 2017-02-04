@@ -29,6 +29,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'zweifisch/pipe2eval'
+Plugin 'alvan/vim-closetag'
 
 " Navigation
 Plugin 'scrooloose/nerdtree'
