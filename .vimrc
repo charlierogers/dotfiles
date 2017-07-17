@@ -30,6 +30,9 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'zweifisch/pipe2eval'
 Plugin 'alvan/vim-closetag'
+Plugin 'elzr/vim-json'
+Plugin 'pangloss/vim-javascript'
+Plugin 'itspriddle/vim-jquery'
 
 " Navigation
 Plugin 'scrooloose/nerdtree'
@@ -78,6 +81,9 @@ map <F2> :YcmCompleter FixIt<CR>
 
 " Vim-EasyTags
 nnoremap <F5> :UpdateTags<cr>
+
+" filenames for closetags
+let g:closetag_filenames = "*.html,*.xml"
 
 " Vim-Conflicted
 " display version name of each split in the statusbar
@@ -158,6 +164,8 @@ nnoremap _ ddkP
 " Only works +clipboard and/or +xterm_clipboard
 if has('unnamedplus')
     set clipboard=unnamed,unnamedplus
+else 
+    set clipboard=unnamed
 endif
 
 " Toggle between regular editing mode and past mode
@@ -183,3 +191,6 @@ autocmd FileType cpp set keywordprg=cppman
 
 " Don't print headers when printing to pdf with :hardcopy command
 set popt+=header:0
+
+" Format JSON
+nmap =j :%!python -m json.tool<CR>
