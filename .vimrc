@@ -40,11 +40,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'christoomey/vim-conflicted'
 
 " Colorschemes
-Plugin 'flazz/vim-colorschemes'
-Plugin 'crusoexia/vim-monokai'
+" Plugin 'flazz/vim-colorschemes'
+" Plugin 'crusoexia/vim-monokai'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'crusoexia/vim-dracula'
+" Plugin 'crusoexia/vim-dracula'
 " Plugin 'dracula/vim'
+Plugin 'jnurmine/Zenburn'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -95,7 +96,7 @@ let g:pipe2eval_map_key = '<Leader>e'
 set t_Co=256
 
 " Solarized
-" set background=light
+" set background=dark
 " let g:solarized_termcolors=256
 
 " Syntastic
@@ -115,10 +116,11 @@ let g:syntastic_check_on_wq = 0
 
 
 " Turn syntax highlighting on
+let python_highlight_all=1
 syntax enable
 
 " Set color scheme 
-colorscheme dracula
+colorscheme zenburn
 
 " Setting indentation 
 set autoindent
