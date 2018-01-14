@@ -124,9 +124,6 @@ bind '"\e[B":history-search-forward'
 #Shortcut to copy to clipboard with xclip
 alias copy="xclip -sel clip"
 
-#Shortcut to open files
-alias open=xdg-open
-
 export PATH=$HOME/bin:$PATH
 
 #Sets GCC version to 5.1.0
