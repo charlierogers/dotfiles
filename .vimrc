@@ -33,10 +33,12 @@ Plugin 'alvan/vim-closetag'
 Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'itspriddle/vim-jquery'
+Plugin 'uplus/vim-clang-rename'
 
 " Navigation
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'brookhong/cscope.vim'
 
 " Version Control
 Plugin 'tpope/vim-fugitive'
@@ -115,6 +117,35 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Cscope
+nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
+nnoremap <leader>l :call ToggleLocationList()<CR>
+" s: Find this C symbol
+nnoremap  <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
+nnoremap  <leader>vfs :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+" g: Find this definition
+nnoremap  <leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
+nnoremap  <leader>vfg :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+" d: Find functions called by this function
+nnoremap  <leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
+nnoremap  <leader>vfd :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+" c: Find functions calling this function
+nnoremap  <leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
+nnoremap  <leader>vfc :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+" t: Find this text string
+nnoremap  <leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
+nnoremap  <leader>vft :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+" e: Find this egrep pattern
+nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
+nnoremap  <leader>vfe :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+" f: Find this file
+nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
+nnoremap  <leader>vff :vert scs find f <C-R>=expand("<cfile>")<CR><CR>   
+" i: Find files #including this file
+nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
+nnoremap  <leader>vfi :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR> 
+
+
 " ------------------- END VUNDLE ---------------------------
 
 
@@ -137,12 +168,19 @@ set softtabstop=0
 set expandtab
 set smarttab
 
+" Open new split windows on right instead of left
+set splitright
+
 
 " Turning on line numbering
 set number
 
 " Toggling relative line numbers
 nnoremap <leader>r :set relativenumber!<cr>
+
+" Show filename in status bar
+set laststatus=2
+set statusline=%f "tail of the filename"
 
 " Remaps changing from command mode from Esc to jj
 inoremap jj <Esc>
