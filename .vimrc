@@ -171,7 +171,7 @@ colorscheme zenburn
 set autoindent
 set smartindent
 set shiftwidth=4
-set tabstop=8
+set tabstop=4
 set softtabstop=0
 set expandtab
 set smarttab
